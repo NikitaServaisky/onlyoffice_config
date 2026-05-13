@@ -4,13 +4,12 @@ services:
     image: onlyoffice/documentserver:latest
     restart: always
     envronment:
-      - JWT_ENABLED = true
-      - JWT_SECRET = ${JWT_SECRET}
+      - JWT_ENABLED=true
+      - JWT_SECRET=${JWT_SECRET}
     volumes:
-      - ./fonts:/usr/share/fonts/truetype/custom
+      - ../fonts:/usr/share/fonts/truetype/custom
       - ./run.sh:/run_custom.sh
       - /srv/logs/onlyoffice:/var/log/onlyoffice
-      - ./run.sh:/run_custom.sh
     ports:
       - "8080:80"
     entrypoint: "/run_custom.sh"
