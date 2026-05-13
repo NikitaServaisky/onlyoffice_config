@@ -1,0 +1,20 @@
+services:
+  onlyoffice-ds:
+    container_name: onlyoffice-ds
+    image: onlyoffice/documentserver:latest
+    restart: always
+    envronment:
+      - JWT_ENABLED = true
+      - JWT_SECRET = ${JWT_SECRET}
+    volumes:
+      - ./fonts:/usr/share/fonts/truetype/custom
+      - ./run.sh:/run_custom.sh
+      - /srv/logs/onlyoffice:/var/log/onlyoffice
+      - ./run.sh:/run_custom.sh
+    ports:
+      - "8080:80"
+    entrypoint: "/run_custom.sh"
+    deploy:
+      resources:
+        limits:
+          memory: 2G
