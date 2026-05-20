@@ -6,9 +6,9 @@ services:
     environment:
       - JWT_ENABLED=true
       - JWT_SECRET=${JWT_SECRET}
-      - LANG=en_us.UTF-8
+      - LANG=en_US.UTF-8
       - LANGUAGE=en_US:en
-      - LC_ALL=en_us.utf-8
+      - LC_ALL=en_US.UTF-8
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
       - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/hr_IL:ro
@@ -20,4 +20,4 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2G
+          memory: 4G
