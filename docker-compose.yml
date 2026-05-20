@@ -15,7 +15,7 @@ services:
       - ./run.sh:/run_custom.sh
       - /srv/logs/onlyoffice:/var/log/onlyoffice
     ports:
-      - "8080:80"
+      - "8081:80"
     entrypoint: "/run_custom.sh"
     deploy:
       resources:
