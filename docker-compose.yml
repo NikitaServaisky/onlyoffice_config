@@ -3,7 +3,7 @@ services:
     container_name: onlyoffice-ds
     image: onlyoffice/documentserver:latest
     restart: always
-    envronment:
+    environment:
       - JWT_ENABLED=true
       - JWT_SECRET=${JWT_SECRET}
       - LANG=en_us.UTF-8
