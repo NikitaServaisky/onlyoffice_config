@@ -25,5 +25,5 @@ services:
       - nextcloud-net
 
 networks:
-  nextcloud-net:
+  proxy-net:
     external: true
