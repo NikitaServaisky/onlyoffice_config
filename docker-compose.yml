@@ -12,7 +12,7 @@ services:
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
       - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/he_IL:ro
-      - ./run.sh:/run_custom.sh
+      - ./run.sh:/run.sh
       - /srv/logs/onlyoffice:/var/log/onlyoffice
     ports:
       - "8081:80"
