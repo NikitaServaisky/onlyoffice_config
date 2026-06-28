@@ -7,4 +7,4 @@ fc-cache -fv
 /usr/bin/documentserver-generate-allfonts.sh
 
 # Continue to running Entrypoint of Onlyoffice
-/user/local/bin/entrypoint.sh
+/usr/bin/documentserver-entrypoint.sh
