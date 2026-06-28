@@ -11,7 +11,7 @@ services:
       - LC_ALL=C.UTF-8
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
-      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/hr_IL:ro
+      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/he_IL:ro
       - ./run.sh:/run_custom.sh
       - /srv/logs/onlyoffice:/var/log/onlyoffice
     ports:
