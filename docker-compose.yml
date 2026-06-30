@@ -12,11 +12,10 @@ services:
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
       - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/he_IL:ro
-      - ./run.sh:/run.sh
       - /srv/logs/onlyoffice:/var/log/onlyoffice
     ports:
       - "8081:80"
-    entrypoint: "/run.sh"
+    command: /bin/sh -c "fc-cache -fv && /usr/bin/documentserver-generate-allfonts.sh && /usr/bin/documentserver-entrypoint.sh"
     deploy:
       resources:
         limits:
