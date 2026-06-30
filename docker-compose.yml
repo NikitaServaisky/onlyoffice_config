@@ -12,7 +12,7 @@ services:
       - LC_CTYPE=he_IL.UTF-8
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
-      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/he_IL:ro
+      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/he_IL
       - /srv/logs/onlyoffice:/var/log/onlyoffice
     ports:
       - "8081:80"
