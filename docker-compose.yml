@@ -9,6 +9,7 @@ services:
       - LANG=C.UTF-8
       - LANGUAGE=C.UTF-8
       - LC_ALL=C.UTF-8
+      - LC_CTYPE=he_IL.UTF-8
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
       - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/he_IL:ro
