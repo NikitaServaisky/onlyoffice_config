@@ -14,9 +14,6 @@ services:
     volumes:
       - ../fonts:/usr/share/fonts/truetype/custom
       - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/hunspell/he_IL
-      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/hunspell/he_il
-      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/hunspell/ar
-      - ../dictionaries/he_IL:/var/www/onlyoffice/documentserver/server/FileConverter/bin/spellchecker/dictionaries/hunspell/ar_SA
       - /srv/logs/onlyoffice:/var/log/onlyoffice
     ports:
       - "8081:80"
